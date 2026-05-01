@@ -1,0 +1,16 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.ext != "md"
+        - file.ext != "base"
+    order:
+      - file.name
+      - file.path
+      - file.backlinks
+      - file.embeds
+      - file.links
+    sort:
+      - property: file.backlinks
+        direction: DESC

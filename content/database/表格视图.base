@@ -1,0 +1,17 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.ext == "md"
+    order:
+      - file.name
+      - file.ctime
+      - file.mtime
+      - file.path
+      - file.tags
+    sort:
+      - property: file.ctime
+        direction: DESC
+      - property: file.path
+        direction: DESC
